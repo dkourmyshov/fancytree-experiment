@@ -31,12 +31,6 @@ $(document).ready(function () {
     ]}
   ];
   var local_storage_supported = 'localStorage' in window && window['localStorage'] !== null;
-  var source;
-  if (!local_storage_supported || (source = localStorage.getItem('fancytree')) === null) {
-    source = initial_source;
-  } else {
-    source = JSON.parse(source);
-  }
   var admin_mode = false;
   $('#admin_mode').prop('disabled', false);
   $('#admin_mode').prop('checked', false);
@@ -69,6 +63,13 @@ $(document).ready(function () {
 '    </div>';
 
   var render_dropdown = function () {
+    var source;
+    if (!local_storage_supported || (source = localStorage.getItem('fancytree')) === null) {
+      source = initial_source;
+    } else {
+      source = JSON.parse(source);
+    }
+
     $('body').append(dropdown_template);
     $('#create_element')[admin_mode ? 'show' : 'hide']();
     $('#tree').css('height', admin_mode ? '284px' : '326px');
@@ -156,6 +157,7 @@ $(document).ready(function () {
   };
 
   remove_dropdown = function () {
+    save_tree($('#tree').fancytree('getTree'));
     $('#selector').remove();
     $('#admin_mode').prop('disabled', false);
     $('#dropdown_field').css('background-color', 'white');
