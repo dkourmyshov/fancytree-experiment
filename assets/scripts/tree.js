@@ -129,7 +129,6 @@ $(document).ready(function () {
     var tree = $('#tree').fancytree('getTree');
     var key;
     if ((key = $('#dropdown_field').attr('data-value')) !== '') {
-      console.log(key);
       tree.activateKey(key);
     }
 
@@ -169,7 +168,6 @@ $(document).ready(function () {
   });
 
   $('#dropdown_field').click(function () {
-    console.log(dropdown_shown);
     if (dropdown_shown) {
       remove_dropdown();
     } else {
