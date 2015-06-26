@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="6px" height="14px" viewBox="0 0 6 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Drag-affordance</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="STC-Employee-list__department-list_admin" sketch:type="MSArtboardGroup" transform="translate(-818.000000, -307.000000)" fill="#333333">
+            <path d="M818,311 L820,311 L820,313 L818,313 L818,311 Z M818,315 L820,315 L820,317 L818,317 L818,315 Z M818,319 L820,319 L820,321 L818,321 L818,319 Z M822,311 L824,311 L824,313 L822,313 L822,311 Z M818,307 L820,307 L820,309 L818,309 L818,307 Z M822,307 L824,307 L824,309 L822,309 L822,307 Z M822,315 L824,315 L824,317 L822,317 L822,315 Z M822,319 L824,319 L824,321 L822,321 L822,319 Z" id="Drag-affordance" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

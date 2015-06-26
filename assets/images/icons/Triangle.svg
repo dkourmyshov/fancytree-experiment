@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="STC-Employee-list__department-list_admin" sketch:type="MSArtboardGroup" transform="translate(-816.000000, -433.000000)" fill="#333333">
+            <path d="M816,433 L825,433 L820.5,438 L816,433 Z" id="Triangle" sketch:type="MSShapeGroup" transform="translate(820.500000, 435.500000) scale(1, -1) rotate(-180.000000) translate(-820.500000, -435.500000) "></path>
+        </g>
+    </g>
+</svg>

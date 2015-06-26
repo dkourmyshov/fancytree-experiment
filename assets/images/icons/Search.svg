@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="STC-Employee-list__department-list_admin" sketch:type="MSArtboardGroup" transform="translate(-811.000000, -239.000000)" fill="#333333">
+            <path d="M824.062985,253.194356 C822.683889,254.322908 820.921016,255 819,255 C814.581722,255 811,251.418278 811,247 C811,242.581722 814.581722,239 819,239 C823.418278,239 827,242.581722 827,247 C827,248.921016 826.322908,250.683889 825.194356,252.062985 L829.374012,256.242641 L828.242641,257.374012 L824.062985,253.194356 Z M819,254 C822.865993,254 826,250.865993 826,247 C826,243.134007 822.865993,240 819,240 C815.134007,240 812,243.134007 812,247 C812,250.865993 815.134007,254 819,254 Z" id="Search" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
