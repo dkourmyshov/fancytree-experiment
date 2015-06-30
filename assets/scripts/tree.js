@@ -157,12 +157,15 @@ $(document).ready(function () {
 
     $('#admin_mode').prop('disabled', true);
     $('#dropdown_field').css('background-color', '#f2f2f2');
+    $('#selector').fadeIn();
     dropdown_shown = true;
   };
 
   remove_dropdown = function () {
     save_tree($('#tree').fancytree('getTree'));
-    $('#selector').remove();
+    $('#selector').fadeOut(400, function () {
+      $('#selector').remove();
+    }); // promise?
     $('#admin_mode').prop('disabled', false);
     $('#dropdown_field').css('background-color', 'white');
     dropdown_shown = false;
