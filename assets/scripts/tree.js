@@ -32,6 +32,7 @@ $(document).ready(function () {
   ];
   var local_storage_supported = 'localStorage' in window && window['localStorage'] !== null;
   var admin_mode = false;
+  var drag_n_drop_in_progress = false;
   $('#admin_mode').prop('disabled', false);
   $('#admin_mode').prop('checked', false);
   var dropdown_shown = false;
@@ -72,8 +73,9 @@ $(document).ready(function () {
 
     var rebind_hover = function () {
       $('#tree span.fancytree-node').hover(function (event) {
-        $(this).addClass('fancytree-hover');
+        $(this).addClass(drag_n_drop_in_progress ? 'fancytree-drop-target' : 'fancytree-hover');
       }, function (event) {
+        $(this).removeClass('fancytree-drop-target');
         $(this).removeClass('fancytree-hover');
       });
     }
@@ -91,7 +93,9 @@ $(document).ready(function () {
         preventRecursiveMoves: true,
 
         dragStart: function (node, data) {
+          drag_n_drop_in_progress = true;
           return true;
+
         },
         dragEnter: function (node, data) {
           return true;
@@ -102,6 +106,7 @@ $(document).ready(function () {
             node.setExpanded(true);
           }
           data.otherNode.getParent().sortChildren();
+          drag_n_drop_in_progress = false;
           rebind_hover();
           save_tree(data.otherNode.tree);
         }

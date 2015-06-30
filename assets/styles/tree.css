@@ -116,6 +116,14 @@ ul.fancytree-container ul {
   padding-left: 6px;
 }
 
+.fancytree-drag-helper {
+  background-color: white;
+}
+
+.fancytree-drop-target {
+  background-color: #cccccc;
+}
+
 .fancytree-hover, .fancytree-drag-helper {
   border: 1px solid #cccccc;
 }
@@ -156,4 +164,3 @@ ul.fancytree-container ul {
 .fancytree-node img.settings {
   padding-right: 12px;
 }
-
