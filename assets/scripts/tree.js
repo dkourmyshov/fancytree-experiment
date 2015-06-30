@@ -125,6 +125,11 @@ $(document).ready(function () {
         }
       }
     });
+    $('#tree span.fancytree-node').hover(function (event) {
+      $(this).addClass('fancytree-hover');
+    }, function (event) {
+      $(this).removeClass('fancytree-hover');
+    });
 
     var tree = $('#tree').fancytree('getTree');
     var key;

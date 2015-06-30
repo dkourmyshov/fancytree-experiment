@@ -58,14 +58,15 @@ ul.fancytree-container li {
 }
 
 .fancytree-node, .fancytree-drag-helper {
+  border: 1px solid white;
   color: #484848;
   display: block;
-  height: 30px;
+  height: 28px; /* compensate for border */
   line-height: 30px;
   padding-left: 6px;
 }
 
-.fancytree-active, .fancytree-drag-helper {
+.fancytree-hover, .fancytree-drag-helper {
   border: 1px solid #cccccc;
 }
 
@@ -93,7 +94,7 @@ ul.fancytree-container li {
   display: none;
 }
 
-.fancytree-active img {
+.fancytree-hover img {
   display: inline;
 }
 
