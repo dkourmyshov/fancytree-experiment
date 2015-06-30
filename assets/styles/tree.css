@@ -1,5 +1,6 @@
 * {
   font-family: helvetica, sans-serif;
+  font-size: 14px;
 }
 #dropdown_field {
   width: 264px;
@@ -13,6 +14,35 @@
   background-image: url(../images/icons/Triangle.svg);
   background-color: white;
   background-repeat: no-repeat;
+  position: relative;
+}
+#dropdown_field:after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0; 
+  background: rgba(255,255,255,0.6);
+  pointer-events: none;
+}
+.search-container-light:after {
+  content: "";
+  position: absolute;
+  top: 1px; bottom: 1px; left: 1px; right: 0px; 
+  background: rgba(255,255,255,0.6);
+  pointer-events: none;
+}
+.search-container-dark:after {
+  content: "";
+  position: absolute;
+  top: 1px; bottom: 1px; left: 1px; right: 0px; 
+  background: rgba(255,255,255,0.3);
+  pointer-events: none;
+}
+.fancytree-node img:after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0; 
+  background: rgba(255,255,255,0.6);
+  pointer-events: none;
 }
 #selector {
   width: 400px;
@@ -22,6 +52,9 @@
   box-shadow: 0 0 5px #bfbfbf;
   margin-left: auto; margin-right: 0;
   display: none;
+}
+#search_container {
+  position: relative;
 }
 #search {
   background-image: url(../images/icons/Search.svg);
@@ -51,6 +84,11 @@
   margin-top: 3px;
 }
 
+ul.fancytree-container {
+  margin-top: 0;
+  padding-left: 0;
+}
+
 ul.fancytree-container li {
   list-style-image: none;
   list-style-position: outside;
@@ -58,11 +96,15 @@ ul.fancytree-container li {
   overflow: hidden;
 }
 
+ul.fancytree-container ul {
+  padding-left: 28px;
+}
+
 .fancytree-node, .fancytree-drag-helper {
   border: 1px solid white;
   color: #484848;
   display: block;
-  height: 28px; /* compensate for border */
+  height: 30px;
   line-height: 30px;
   padding-left: 6px;
 }
@@ -93,6 +135,7 @@ ul.fancytree-container li {
   float: right;
   padding-top: 8px;
   display: none;
+  position: relative;
 }
 
 .fancytree-hover img {

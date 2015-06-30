@@ -57,7 +57,7 @@ $(document).ready(function () {
 // but here it would be overkill.
   var dropdown_template = '' + 
 '    <div id="selector">' +
-'      <input id="search" name="search" type="text">' +
+'      <div id="search_container" class="search-container-light"><input id="search" name="search" type="text"></div>' +
 '      <div id="create_element"><span>+ Create new element</span></div>' +
 '      <div id="tree"></div>' +
 '    </div>';
@@ -148,6 +148,10 @@ $(document).ready(function () {
       } else {
         tree.filterNodes(match, {autoExpand: true});
       }
+    }).focus(function () {
+      $(this).parent().addClass('search-container-dark').removeClass('search-container-light');
+    }).blur(function () {
+      $(this).parent().addClass('search-container-light').removeClass('search-container-dark');
     });
 
     $('#create_element').click(function () {
