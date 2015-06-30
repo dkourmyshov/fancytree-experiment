@@ -70,6 +70,14 @@ $(document).ready(function () {
       source = JSON.parse(source);
     }
 
+    var rebind_hover = function () {
+      $('#tree span.fancytree-node').hover(function (event) {
+        $(this).addClass('fancytree-hover');
+      }, function (event) {
+        $(this).removeClass('fancytree-hover');
+      });
+    }
+
     $('body').append(dropdown_template);
     $('#create_element')[admin_mode ? 'show' : 'hide']();
     $('#tree').css('height', admin_mode ? '284px' : '326px');
@@ -94,6 +102,7 @@ $(document).ready(function () {
             node.setExpanded(true);
           }
           data.otherNode.getParent().sortChildren();
+          rebind_hover();
           save_tree(data.otherNode.tree);
         }
       } : null,
@@ -119,11 +128,9 @@ $(document).ready(function () {
         }
       }
     });
-    $('#tree span.fancytree-node').hover(function (event) {
-      $(this).addClass('fancytree-hover');
-    }, function (event) {
-      $(this).removeClass('fancytree-hover');
-    });
+
+
+    rebind_hover();
 
     var tree = $('#tree').fancytree('getTree');
     var key;
