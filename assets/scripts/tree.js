@@ -76,15 +76,9 @@ $(document).ready(function () {
     $('#tree').fancytree({
       extensions: admin_mode ? ['dnd', 'filter'] : ['filter'],
       quicksearch: true, 
-      minExpandLevel: 99, // turn off node collapsing/expanding
       source: source,
       dnd: admin_mode ? {
-        //autoExpandMS: 400,
-        /*draggable: { 
-          zIndex: 1000,
-          scroll: false,
-          revert: "invalid"
-        },*/
+
         preventVoidMoves: true,
         preventRecursiveMoves: true,
 
