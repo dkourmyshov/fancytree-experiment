@@ -73,10 +73,13 @@ $(document).ready(function () {
 
     var rebind_hover = function () {
       $('#tree span.fancytree-node').hover(function (event) {
-        $(this).addClass(drag_n_drop_in_progress ? 'fancytree-drop-target' : 'fancytree-hover');
+        if (!drag_n_drop_in_progress) {
+          $(this).addClass('fancytree-hover');
+        }
       }, function (event) {
-        $(this).removeClass('fancytree-drop-target');
-        $(this).removeClass('fancytree-hover');
+        if (!drag_n_drop_in_progress) {
+          $(this).removeClass('fancytree-hover');
+        }
       });
     }
 

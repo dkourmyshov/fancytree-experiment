@@ -123,8 +123,18 @@ ul.fancytree-container ul {
   background-color: white;
 }
 
-.fancytree-drop-target {
+.fancytree-drop-target.fancytree-drop-accept {
   background-color: #cccccc;
+}
+
+.fancytree-drop-target.fancytree-drop-accept.fancytree-drop-before {
+  background-color: white;
+  border-top: 1px solid #cccccc;
+}
+
+.fancytree-drop-target.fancytree-drop-accept.fancytree-drop-after {
+  background-color: white;
+  border-bottom: 1px solid #cccccc;
 }
 
 .fancytree-hover, .fancytree-drag-helper {
