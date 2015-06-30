@@ -160,7 +160,7 @@ $(document).ready(function () {
     });
 
     $('#admin_mode').prop('disabled', true);
-    $('#dropdown_field').css('background-color', '#f2f2f2');
+    $('#dropdown_field').addClass('dropdown-field-dark').removeClass('dropdown-field-light');
     $('#selector').fadeIn();
     dropdown_shown = true;
   };
@@ -169,9 +169,9 @@ $(document).ready(function () {
     save_tree($('#tree').fancytree('getTree'));
     $('#selector').fadeOut(400, function () {
       $('#selector').remove();
+      $('#dropdown_field').addClass('dropdown-field-light').removeClass('dropdown-field-dark');
     }); // promise?
     $('#admin_mode').prop('disabled', false);
-    $('#dropdown_field').css('background-color', 'white');
     dropdown_shown = false;
   };
 
