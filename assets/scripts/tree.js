@@ -118,8 +118,8 @@ $(document).ready(function () {
       renderNode: function (event, data) {
         var node = data.node;
         if (admin_mode) {
-          $(node.span).find('> img').remove();
-          $(node.span).append('<img src="assets/images/icons/Drag-affordance.svg" class="affordance"><img src="assets/images/icons/Settings.svg" class="settings">');
+          $(node.span).find('> .img-container').remove();
+          $(node.span).append('<div class="img-container"><img src="assets/images/icons/Settings.svg" class="settings"><img src="assets/images/icons/Drag-affordance.svg" class="affordance"></div>');
         }
       },
       collapse: function (event, data) {
@@ -162,6 +162,7 @@ $(document).ready(function () {
 
     $('#create_element').click(function () {
       tree.getRootNode().addChildren([{title: guid()}]);
+      rebind_hover();
       save_tree(tree);
     });
 

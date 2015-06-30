@@ -44,11 +44,14 @@
   background: rgba(255,255,255,0.3);
   pointer-events: none;
 }
-.fancytree-node img:after {
+.fancytree-node .img-container {
+  position: relative;
+}
+.fancytree-node .img-container:after {
   content: "";
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0; 
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.58);
   pointer-events: none;
 }
 #selector {
@@ -110,10 +113,10 @@ ul.fancytree-container ul {
 .fancytree-node, .fancytree-drag-helper {
   border: 1px solid white;
   color: #484848;
-  display: block;
   height: 30px;
   line-height: 30px;
   padding-left: 6px;
+  display: flex;
 }
 
 .fancytree-drag-helper {
@@ -129,6 +132,7 @@ ul.fancytree-container ul {
 }
 
 .fancytree-title {
+  flex: 1;
   overflow: hidden; 
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -147,8 +151,6 @@ ul.fancytree-container ul {
 }
 
 .fancytree-node img {
-  float: right;
-  padding-top: 8px;
   display: none;
   position: relative;
 }
@@ -158,9 +160,9 @@ ul.fancytree-container ul {
 }
 
 .fancytree-node img.affordance {
-  padding-right: 4px;
+  margin-right: 4px;
 }
 
 .fancytree-node img.settings {
-  padding-right: 12px;
+  margin-right: 12px;
 }
